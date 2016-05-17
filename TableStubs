@@ -11,11 +11,12 @@ public class Table{
       all other graphical portrayals are shown in this class.
    */
     public static void main(String args[]){
-        Picture background = new Picture ("pokertable.png");
-        
-        JFrame myFrame = new JFrame("Our Game");
-        myFrame.setSize(300,400);
-        myFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        myFrame.setVisible(true);
+    //Acts as the driver for the program
     }
+    
+    public static void setBackground(){
+    //changes the background as necessary throughout gameplay
+    }
+    
+    
 }
