@@ -1,0 +1,22 @@
+//Naman Rai, Yash Shekar, Vishnu
+Public Class DealerStubs{
+
+public class MoveCard{
+/**
+This class basically takes the cards out of the deck and moves it to the players' sides. 
+**/
+this.moveFirstCard();
+this.moveSecondCard();
+this1.moveFirstCard();
+this2.moveSecondCard();
+
+}
+
+public class ShuffleCard{
+/**
+This class shows the movement of the cards in a shuffling motion before being passed out to the players
+so that the players are confident that the cards have been shuffled
+**/
+
+
+}
