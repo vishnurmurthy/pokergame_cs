@@ -4,7 +4,13 @@ public class Card
 {
    public String filename;
    public String cardvalue;
-   public String face; 
+   public String face;
+   /**
+      The card class is a class that stores data about individual Cards. The class stores information
+      such as the value of the card, the face of the card, and the filename of the .jpg file that will
+      graphically represent the card. All jpg files of card pictures were retrieved from this website:
+      http://opengameart.org/content/playing-cards-vector-png
+   */
    public Card(String cardvalue, String face)
    {
       this.cardvalue = cardvalue;
