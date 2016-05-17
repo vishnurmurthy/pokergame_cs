@@ -1,0 +1,21 @@
+//Yash Shekar, Vishnu Murthy, Naman Rai
+//Version: 5/16/16
+
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
+public class Table{
+    
+   /**
+      The Table class is a class that is the ackbone for the entire game. All of the cards are played on the table and
+      all other graphical portrayals are shown in this class.
+   */
+    public static void main(String args[]){
+        Picture background = new Picture ("pokertable.png");
+        
+        JFrame myFrame = new JFrame("Our Game");
+        myFrame.setSize(300,400);
+        myFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        myFrame.setVisible(true);
+    }
+}
