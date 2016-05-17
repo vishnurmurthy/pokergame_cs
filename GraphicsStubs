@@ -39,34 +39,34 @@ public class PlayingCards
     
     
     /** The JFitz card deck as an <code>ImagePaintableLite[]</code>. */
-    protected ImagePaintableLite[] cards = null;
+    private ImagePaintableLite[] cards = null;
     
     
     /** The size of the card deck. */
-    protected int N = 0;
+    private int N = 0;
     
     
     /** The table panel gap. */
-    protected int gap = 20;
+    private int gap = 20;
     
     
     /** The edge size for card placement in the graphics window. */
-    protected int edge = 5;
+    private int edge = 5;
     
     
     /** The BufferedPanel window. */
-    protected BufferedPanel window = null;
+    private BufferedPanel window = null;
     
     
     /** The window width. */
-    protected int w0;
+    private int w0;
     
     /** The window height. */
-    protected int h0;
+    private int h0;
     
     
     /** The card width. */
-    protected int w1;
+    private int w1;
     
     /** The card height. */
     protected int h1;
