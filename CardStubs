@@ -1,3 +1,5 @@
+//Yash Shekar, Vishnu Murthy, Naman Rai
+//Version: 5/16/16
 public class Card
 {
    public String filename;
