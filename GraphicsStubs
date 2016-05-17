@@ -1,4 +1,18 @@
-public class GraphicsStubs
+import edu.neu.ccs.*;
+import edu.neu.ccs.gui.*;
+import edu.neu.ccs.util.*;
+
+import java.awt.*;
+import javax.swing.*;
+
+/**
+ * <p>Class <code>PlayingCards</code> displays images
+ * of the 52 traditional cards in the suits
+ * hearts, diamonds, spades, and clubs,
+ * plus 2 card backs and 2 jokers.</p>
+ */
+public class PlayingCards
+    extends DisplayPanel
 {
     /** The default size of the graphics window: 500. */
     public static int SIZE = 500;
