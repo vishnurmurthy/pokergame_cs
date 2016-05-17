@@ -1,0 +1,19 @@
+public class Card
+{
+    public Card(String cardvalue, String face)
+    {
+    }
+    public String getcardvalue()
+    {  
+        return cardvalue;
+    }
+    public String getface()
+    {
+        return face;
+    }
+    public String getfilename()
+    {
+        return filename;
+    }  
+
+}
