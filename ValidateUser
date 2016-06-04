@@ -1,0 +1,92 @@
+/*
+   This program uses a driver class ValidateUser to get user input from the screen using the
+   scanner class. The ValidateUser calls the UserCheck method that checks to see if the entered
+   username is valid. The requirments for a valid username are as follows:
+
+   		1) Username must contain only letters, numbers, @, underscores, and a period.
+   		2) Username must be a valid email address
+
+   If the username is valid the result will display "Valid Username" If not the result will
+   display an appropriate error message.
+
+   Author: Daniel
+   Channel: BasementProgramming
+
+*/
+
+import java.util.Scanner;								// Imports the Scanner class to get Keyboard Inputs
+
+class ValidateUser {
+
+	public static void main (String [] args) {
+
+		String inputUserName;							// Creates the userName variable
+
+		Scanner input = new Scanner (System.in);		// Creates a new Scanner
+
+		System.out.print("Username: ");					// Prints the word "Username" to the screen
+		inputUserName = input.next();					// Gets the user input for the username
+
+		System.out.println(UserCheck(inputUserName));	// Calls the UserCheck Method on the Username entered by the user and prints result to screen
+		System.out.println("");
+
+
+		main(args);										// re-runs the program (Allows for multiple tests)
+	}
+
+	public static String UserCheck(String Username) {
+
+		String result = "Valid Username";									// Sets the initial result as valid
+		int atLoc =0;														// Sets initial (@) location to be 0
+		int perLoc =0;														// Sets initial period location to be 0
+		String end;															// Grabs the last four letters of the username
+
+
+		for (int x =0; x < Username.length(); x++) {
+			if ((Username.charAt(x) >= 48 && Username.charAt(x) <= 57) || (Username.charAt(x) >= 65 && Username.charAt(x) <= 90) ||
+				(Username.charAt(x) >= 97 && Username.charAt(x) <= 122) || (Username.charAt(x) == 64) || (Username.charAt(x) == 46)
+				|| (Username.charAt(x) == 95)) {
+					//Keep the Username
+				} else {
+					result = "Username Contains Invalid Character!";		//Checks that password contains only letters and numbers
+				}
+
+			if (Username.charAt(x) == 64) {									//Finds the location of the (@) symbol
+				atLoc = x;
+
+			}
+
+			if (Username.charAt(x) == 46) {									//Finds the location of the period
+				perLoc = x;
+
+			}
+		} // Ends the for loop
+
+		if ((atLoc == 0) || (perLoc == 0)) {
+			result = "Not a valid email Address";
+		}
+
+		//if ((atLoc < 1) || (perLoc < 1) || (perLoc == Username.length()-1)) {	//Checks that email contains a period and an (@) symbol and
+			//result = "Not a valid email address";							    //that they are not in the first or last position in the Username.
+		//}
+
+		if (perLoc < atLoc) {
+			result = "Not a valid email address";							//Checks that the (@) symbol follows the period in the username
+		}
+
+		if (Username.charAt(Username.length()-4) != 46) {
+			result = "Not a valid email address";
+		}
+
+		end = Username.substring(Username.length()-3,Username.length());
+
+		if ((end.matches("com")) || (end.matches("gov")) || (end.matches("edu")) || (end.matches("org")) || (end.matches("mil"))) {
+			result = "Valid Username";
+		} else {
+			result = "Not a valid email address";
+		}
+
+			return (result);												// Returns the value of "result"
+
+	} // Ends the UserCheck method
+} // Ends the ValidateUser class
