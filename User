@@ -1,0 +1,40 @@
+/*
+   The User class Defines the properties for the Users to be stored in the Database.
+   Each User has a valid Username verified by the UserCheck method and a valid
+   Password verified by the PassCheck method.
+*/
+
+class User {
+
+	private String username ="";	//Creates an empty username
+	private String password ="";	//Creates an empty password
+
+	public User() {}
+
+	public User (String newUsername, String newPassword) { //Constructor that accepts username and password
+
+		setUsername (newUsername);
+		setPassword (newPassword);
+	}
+
+	public String getUsername() {					//Get method for the username
+		return username;
+	}
+
+	public void setUsername (String username) {		//Set method for the username
+		this.username = username;
+	}
+
+	public String getPassword() {					//Get method for the password
+		return password;
+	}
+
+	public void setPassword (String password) {		//Set method for the password
+		this.password = password;
+	}
+
+	public String toString () {						//To String method for the User Class
+		return (username + "    " + password);
+	}
+
+} //Ends User Class
